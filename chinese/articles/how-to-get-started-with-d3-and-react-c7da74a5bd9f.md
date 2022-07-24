@@ -1,13 +1,13 @@
 > -  原文地址：[How to get started with D3 and React](https://www.freecodecamp.org/news/how-to-get-started-with-d3-and-react-c7da74a5bd9f/)
 > -  原文作者：[Magdalena Stenius](https://www.freecodecamp.org/news/author/magdalena/)
-> -  译者：
+> -  译者：Utopia-xxl
 > -  校对者：
 
 ![How to get started with D3 and React](https://cdn-media-1.freecodecamp.org/images/1*AEjU4WgW-clHPyokVbdcVg.jpeg)
 
-Data Driven Documents (D3.js) is a JavaScript library used to create visualizations of data using HTML, CSS, and SVG. It does this by binding data to the DOM (Document Object Model) and its elements and allowing them to transform when the data changes.
+数据驱动文档（Data Driven Documents, D3.js ）是一个JavaScript库，用于使用 HTML、CSS 和 SVG 创建数据可视化。为此，它将数据绑定到 DOM （文档对象模型）及其元素，并允许它们在数据更改时进行转换。
 
-For example, let’s say we want to create a pie chart of amounts of books in every genre in a library. We have some data which we update every time a librarian enters a new book. We store it in the application state, in a variable called “books”.
+例如，我们想要创建一个关于图书馆中每种类型书籍数量的饼状图。我们有一些数据，当图书管理员每次输入一本新书时，我们都会更新这些数据。我们将它存储在应用程序状态中，存储在一个名为“books”的变量中。
 
 ```js
 const [books, setBooks] = useState(initialBooks)
@@ -32,7 +32,7 @@ const initialBooks = [
 ]
 ```
 
-Right now we could create a chart that has 50% of fantasy, 25% of non-fiction and 25% of poetry. When the librarian adds a new book to the database, the data changes, and your graft shifts. Let’s say we add “50 vegan dishes”.
+现在我们可以创建一个图表，包含50%的奇幻，25%的非虚构和25%的诗歌。当图书管理员向数据库中添加一本新书时，数据会发生变化，你的移入也会随之变化。假设我们添加了“50道素菜”这本书。
 
 ```js
 setBooks(books.concat(
@@ -44,15 +44,15 @@ setBooks(books.concat(
 ))
 ```
 
-When this data changes, our D3 graph updates the DOM to match the new data. We now have 40% fantasy, 40% non-fiction, and 20% poetry. D3 makes manipulating the website DOM easy. This means that you can use it to create, update and delete elements in the page structure.
+当数据发生变化时，D3会根据新的数据更新DOM。我们现在有40%的奇幻作品，40%的非虚构作品，还有20%的诗歌。D3使得操纵网站DOM变得简单。这意味着可以使用它来创建、更新和删除页面结构中的元素。
 
-If you want to follow along with this example, you can use [Create React App](https://github.com/facebook/create-react-app) to create a simple React web app. If React is still unfamiliar to you, you can [check out this tutorial](https://reactjs.org/tutorial/tutorial.html) from the React documentation.
+如果你想遵循这个例子，你可以使用 [Create React App](https://github.com/facebook/create-react-app) 来创建一个简单的 web 应用。如果您还不熟悉React，您可以从React文档中[查看这一步骤](https://reactjs.org/tutorial/tutorial.html)教程。
 
-1.  Create a new app, called my-d4-app `npx create-react-app my-d3-app`. Change directory into the created folder by using `cd my-d3-app`.
-2.  Install D3 by running `npm install d3 --save` .
-3.  Import D3 to App.js by adding `import * as d3 from d3` . You need to use import \* (“import everything”) since D3 has no default exported module.
+1.  创建一个名为 my-d3-app 的新应用程序`npx create-react-app my-d3-app`。使用 `cd my-d3-app` 将目录更改为创建的文件夹。
+2.  通过运行安装 D3  `npm install d3 --save` 。
+3.  通过添加 `import * as d3 from d3` 将 D3 导入App.js。您需要使用 import *（“导入所有内容”），因为 D3 没有默认导出模块。
 
-#### Selecting DOM elements
+#### 选择 DOM 元素
 
 D3 makes manipulating the DOM easy. For example, let’s try to change all `<p&g`t;</p> -elements to have an inline style setting the color to blue.
 
@@ -280,4 +280,4 @@ Finally, learning D3 is also a good way of getting fluent at traversing and mani
 
 [D3 Tutorials](https://github.com/d3/d3/wiki/Tutorials) suggested by D3
 
-[React tutorial from the React documentation](https://reactjs.org/tutorial/tutorial.html)
+[React tutorial from the React documentation](
